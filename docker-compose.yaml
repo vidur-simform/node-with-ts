@@ -4,5 +4,14 @@ services:
   api:
     container_name: "node_app_container"
     build: .
-    ports: 
-      - "9001:3001"
+    ports:
+      - "9001:9001"
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo:latest
+    restart: always
+    volumes:
+      - type: bind
+        source: ../mongodb_data
+        target: /data/db

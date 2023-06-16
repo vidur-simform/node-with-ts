@@ -18,7 +18,10 @@ $ npm start
 # building app
 $ npm run build
 ```
-## Run app by docker
+## Run app by docker   
+
+First create dir named "mongodb_data" in current project's parent directory for data storage.   
+   
 ```bash
 # development
 $ docker compose up
